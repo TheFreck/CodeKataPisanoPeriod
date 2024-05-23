@@ -1,0 +1,15 @@
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\bin\Debug\net8.0\PisanoPeriods.exe
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\bin\Debug\net8.0\PisanoPeriods.deps.json
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\bin\Debug\net8.0\PisanoPeriods.runtimeconfig.json
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\bin\Debug\net8.0\PisanoPeriods.dll
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\bin\Debug\net8.0\PisanoPeriods.pdb
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.AssemblyInfoInputs.cache
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.AssemblyInfo.cs
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.csproj.CoreCompileInputs.cache
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.sourcelink.json
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.dll
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\refint\PisanoPeriods.dll
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.pdb
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\PisanoPeriods.genruntimeconfig.cache
+C:\Users\chris.freckleton\source\repos\Katas\PisanoPeriods\PisanoPeriods\PisanoPeriods\obj\Debug\net8.0\ref\PisanoPeriods.dll
