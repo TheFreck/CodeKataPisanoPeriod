@@ -9,10 +9,10 @@ namespace PisanoPeriod.Specs
         {
             qty = 13;
             modulo = 8;
-            expect = new BigInteger[] { 1, 1, 2, 3, 5, 0, 5, 5, 2, 7, 1, 0, 1 };
+            expect = new Dictionary<BigInteger, BigInteger> { { 0, 1 },{ 1, 1 },{ 2, 2 },{ 3, 3 },{ 4, 5 },{ 5, 0 },{ 6, 5 },{ 7, 5 },{ 8, 2 },{ 9, 7 },{ 10, 1 },{ 11, 0 },{ 12, 1 } };
         };
 
-        Because of = () => answer = Pisano.Fib(qty,modulo);
+        Because of = () => answer = Pisano.Fib(modulo);
 
         It Should_Return_The_First_N_Fibbonacci_Numbers = () =>
         {
@@ -24,8 +24,8 @@ namespace PisanoPeriod.Specs
 
         static ulong qty;
         static long modulo;
-        static BigInteger[] expect;
-        static BigInteger[] answer;
+        static Dictionary<BigInteger,BigInteger> expect;
+        static Dictionary<BigInteger, BigInteger> answer;
     }
 
     public class When_Modularizing_Fibbonacci
