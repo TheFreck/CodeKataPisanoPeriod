@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,57 +11,53 @@ namespace PisanoPeriod
     {
         public static long PisanoPeriod(long n)
         {
-            var fibs = Fib(500);
-            var modularized = Modularize(fibs, (ulong)n);
-            var pattern = FindPattern(modularized);
-
+            var fibs = Fib(100*(ulong)n,n);
+            var pattern = FindPattern(fibs);
             return pattern.LongLength;
         }
 
-        public static ulong[] Fib(long qty)
+        public static BigInteger[] Fib(ulong qty,long modulo)
         {
-            var fibs = new ulong[qty];
+            var fibs = new BigInteger[qty];
             fibs[0] = 1;
             fibs[1] = 1;
-            for (int i = 2; i < qty; i++)
+            for (ulong i = 2; i < qty; i++)
             {
-                fibs[i] = fibs[i - 2] + fibs[i - 1];
+                fibs[i] = (fibs[i - 2] + fibs[i - 1])%modulo;
             }
 
             return fibs;
         }
 
-        public static ulong[] FindPattern(ulong[] input)
+        public static BigInteger[] FindPattern(BigInteger[] input)
         {
-            var stringInput = string.Join(",", input);
-            // look for a pattern of 2
-            // look for a pattern of 3
-
-            var pattern = new List<ulong>();
+            var pattern = new List<BigInteger>();
             for (var i = 2; i < input.Length; i++)
             {
                 pattern = input.Take(i).ToList();
                 var patternMatch = true;
                 for (var j = 0; j < input.Length; j += i)
                 {
-                    for (var k = 0; k < i && j + k < input.Length; k++)
+                    if (j+pattern.Count <= input.Length)
                     {
-                        if (input[j + k] != pattern[k])
+                        for (var k = 0; k < i && j + k < input.Length; k++)
                         {
-                            patternMatch = false;
-                            break;
+                            if (input[j + k] != pattern[k])
+                            {
+                                patternMatch = false;
+                                break;
+                            }
                         }
                     }
                 }
                 if (patternMatch)
                     return pattern.ToArray();
-
             }
 
             return pattern.ToArray();
         }
 
-        public static ulong[] Modularize(ulong[] input, ulong modulo)
+        public static BigInteger[] Modularize(BigInteger[] input, BigInteger modulo)
         {
             return input.Select(i => i % modulo).ToArray();
         }

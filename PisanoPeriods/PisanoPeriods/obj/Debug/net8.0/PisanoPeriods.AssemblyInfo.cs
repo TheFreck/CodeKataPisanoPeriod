@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PisanoPeriods")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffd32d48f52ae88aca084f4c24984b9756da5cb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97c4e005e1c35fe30625d84e0ecf3e2ebe396475")]
 [assembly: System.Reflection.AssemblyProductAttribute("PisanoPeriods")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PisanoPeriods")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 using Machine.Specifications;
+using System.Numerics;
 
 namespace PisanoPeriod.Specs
 {
@@ -7,22 +8,24 @@ namespace PisanoPeriod.Specs
         Establish context = () =>
         {
             qty = 13;
-            expect = new ulong[] { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233 };
+            modulo = 8;
+            expect = new BigInteger[] { 1, 1, 2, 3, 5, 0, 5, 5, 2, 7, 1, 0, 1 };
         };
 
-        Because of = () => answer = Pisano.Fib(qty);
+        Because of = () => answer = Pisano.Fib(qty,modulo);
 
         It Should_Return_The_First_N_Fibbonacci_Numbers = () =>
         {
-            for (var i = 0; i < qty; i++)
+            for (ulong i = 0; i < qty; i++)
             {
                 answer[i].ShouldEqual(expect[i]);
             }
         };
 
-        static int qty;
-        static ulong[] expect;
-        static ulong[] answer;
+        static ulong qty;
+        static long modulo;
+        static BigInteger[] expect;
+        static BigInteger[] answer;
     }
 
     public class When_Modularizing_Fibbonacci
@@ -30,8 +33,8 @@ namespace PisanoPeriod.Specs
         Establish context = () =>
         {
             modulo = 5;
-            input = new ulong[] { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887 };
-            expect = new ulong[] { 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0, 2, 2, 4, 1, 0, 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2 };
+            input = new BigInteger[] { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887 };
+            expect = new BigInteger[] { 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0, 2, 2, 4, 1, 0, 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2 };
         };
 
         Because of = () => answer = Pisano.Modularize(input, modulo);
@@ -51,17 +54,17 @@ namespace PisanoPeriod.Specs
         };
 
         static ulong modulo;
-        static ulong[] input;
-        static ulong[] expect;
-        static ulong[] answer;
+        static BigInteger[] input;
+        static BigInteger[] expect;
+        static BigInteger[] answer;
     }
 
     public class When_Finding_The_Repeating_Pattern
     {
         Establish context = () =>
         {
-            input = new ulong[] { 1, 2, 3, 1, 2, 3, 1, 2, 3 };
-            expect = new ulong[] { 1, 2, 3 };
+            input = new BigInteger[] { 1, 2, 3, 1, 2, 3, 1, 2, 3 };
+            expect = new BigInteger[] { 1, 2, 3 };
         };
 
         Because of = () => answer = Pisano.FindPattern(input);
@@ -74,9 +77,9 @@ namespace PisanoPeriod.Specs
             }
         };
 
-        private static ulong[] input;
-        private static ulong[] expect;
-        private static ulong[] answer;
+        private static BigInteger[] input;
+        private static BigInteger[] expect;
+        private static BigInteger[] answer;
     }
 
     public class When_Finding_The_Pisano_Period_Of_A_Given_Modulo
